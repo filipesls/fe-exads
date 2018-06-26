@@ -22,4 +22,8 @@ The component is going to create a TAB navigation, in this case, is going to cre
 
 ### Presentatonal component – Angular
 
+Folder `angular`
+
+Run `npm install`
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`
