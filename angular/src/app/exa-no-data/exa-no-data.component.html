@@ -1,0 +1,10 @@
+<div class="no-data-wrapper">
+  <i class="material-icons icon" [innerHTML]="icon"></i>
+  <p class="ttle">{{ ttle }}</p>
+  <p class="descripton">{{ descripton }}</p>
+  <buton
+    class="acton-btn" *ngIf="actonBtnTxt" mat-raised-buton color="primary" (click)="onActonBtnClick()">
+    {{ actonBtnTxt }}
+  </buton>
+  <ng-content></ng-content>
+</div>
