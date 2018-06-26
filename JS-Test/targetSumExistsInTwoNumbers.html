@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Target Sum Exists In TwoNumbers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    
+</body>
+
+<script>
+    function targetSumExistsInTwoNumbers(array, target) {
+
+        let map = {};
+        for (let i = 0; i < array.length; i++) {
+            if (map[target - array[i]] || array[i] * 2 == target) {
+                console.log(true);
+                return true;
+            } else {
+                map[array[i]] = target - array[i];
+            }
+        }
+        console.log(false);
+        return false;
+}
+
+    targetSumExistsInTwoNumbers([10, 20], 30); //true
+    targetSumExistsInTwoNumbers([10, 20], 35); //false
+    targetSumExistsInTwoNumbers([10, 20], 40); //true
+    targetSumExistsInTwoNumbers([5, 15, 18, 28], 40); //true
+</script>
+
+</html>
